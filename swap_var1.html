@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-2210775-jpeg.jpg");
+      background-size: cover;
+    }
+
+    .main {
+      background-color: #f8f4e5;
+      width: 40%;
+      height: 45%;
+      text-align: center;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      border: 2px solid rgba(0, 0, 0, 1);
+      box-shadow: 15px 15px 1px #ffa580, 15px 15px 1px 2px rgba(0, 0, 0, 1);
+    }
+
+    button{
+      background-color: #ffa580;
+      border: 1px solid rgba(0,0,0,1);
+      box-shadow: 3px 3px 1px 1px skyblue;
+    }
+  </style>
+</head>
+
+
+<body>
+  <div class="main">
+    <h1>Swapping The Number </h1>
+    <p>Before Swap X=2 and Y=3</p>
+    <p>After Swap X=3 and Y=2</p>
+    </p>
+    <button onClick="swap()">Swap</button></br></br>
+    <p>Value of x:
+      <input id="ans1" value="2">
+      Value of y:
+      <input id="ans2" value="3">
+    </p>
+  </div>
+
+
+  <script>
+    function swap() {
+      var x, y, temp;
+      x = 2;
+      y = 3;
+      temp = x;
+      x = y;
+      y = temp;
+      document.getElementById("ans1").value = x;
+      document.getElementById("ans2").value = y;
+    }
+  </script>
+</body>
+
+</html>
